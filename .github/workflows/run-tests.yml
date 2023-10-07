@@ -20,4 +20,4 @@ jobs:
           - uses: actions/checkout@v4
 
           - run: composer install --no-interaction --no-progress --prefer-dist
-          - run: vendor/bin/pest --colors always
+          - run: vendor/bin/pest --colors=always
