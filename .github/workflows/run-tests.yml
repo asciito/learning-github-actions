@@ -1,0 +1,23 @@
+name: run-tests
+run-name: Tests
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Setup PHP with PECL extension
+            uses: shivammathur/setup-php@v2
+            with:
+              php-version: '8.2'
+
+          - uses: actions/checkout@v4
+
+          - run: composer install --no-interaction --no-progress --prefer-dist
+          - run: vendor/bin/pest --colors=always

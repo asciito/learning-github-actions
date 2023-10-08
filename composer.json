@@ -1,0 +1,25 @@
+{
+    "name": "asciito/learning-github-actions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "asciito",
+            "email": "ayax.cordova@aydev.mx"
+        }
+    ],
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.37",
+        "pestphp/pest": "^2.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asciito\\LearningGithubActions\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true
+        }
+    }
+}
